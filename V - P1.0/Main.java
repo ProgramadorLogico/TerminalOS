@@ -1,41 +1,60 @@
-// Importa recursos importantes
-import java.util.Scanner;
+// Importa recursos
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 
-// Classe Main
+// Classe do arquivo
 public class Main {
 	
-	// main
+	// Método da classe
 	public static void main(String[] args) {
 		
-		// Chama o código principal
-		new SistemaOperacional(true);
+		// Cria um novo menu
+		new Menu();
 	}
 }
 
-// Classe principal
-class SistemaOperacional {
+// Classe que emula o sistema operacional
+class Emulador {
 	
-	// Variáveis globais
-	public static boolean programaRodando = false;
-	public static String entradaDoUsuario = null;
-	
-	// Construtor
-	public SistemaOperacional(boolean iniciar) {
+	// Construtor do sistema
+	public Emulador() {
 		
-		// Muda programaRodando para a entrada recebida
-		programaRodando = iniciar;
+	}
+}
+
+// Classe do menu
+class Menu {
+	
+	// Variáveis globais da classe
+	public static boolean menuRodando = true;
+	public static List<Integer> listaDeComandos = new ArrayList<> ();
+	
+	// Construtor da classe
+	public Menu() {
+		
+		// Loop do menu
+		while (menuRodando) {
+			
+			// Exibi as opções ao usuário
+		}
 	}
 	
-	// Método de print
-	public static void print(int tipo, String texto) {
+	// Método para exibir as opções
+	public static void exibirOpcoes() {
 		
-		// Printa uma mensagem padrao
-		if (tipo == 1) {
-			System.out.println(texto);
-			
-		// Printa um erro
-		} else if (tipo == 2) {
-			System.err.println(texto);
-		}
+		// Atualiza a lista de comandos
+		listaDeComandos.clear();
+		listaDeComandos.add(0);
+		listaDeComandos.add(1);
+		
+		// Exibe as opcões
+		System.out.println("----------------------");
+		System.out.println("Bem-vindo a TerminalOS");
+		System.out.println("----------------------");
+		System.out.println("");
+		System.out.println("0 - Iniciar emulador");
+		System.out.println("1 - Sair");
+		System.out.println("");
 	}
 }
