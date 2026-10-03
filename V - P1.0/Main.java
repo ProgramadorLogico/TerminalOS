@@ -29,15 +29,18 @@ class Menu {
 	
 	// Variáveis globais da classe
 	public static boolean menuRodando = true;
-	public static List<Integer> listaDeComandos = new ArrayList<> ();
 	public static Scanner scanner = new Scanner(System.in);
 	public static String entradaDoUsuario = null;
 	public static boolean entradaValida = false;
 	public static int entradaDoUsuarioNumero = 0;
+	public static int erros = 0;
 	
 	// Construtor da classe
 	public Menu() {
 		
+		// Faz a inicialização
+		inicializacao();
+				
 		// Loop do menu
 		while (menuRodando) {
 			
@@ -52,21 +55,10 @@ class Menu {
 	// Método para exibir as opções
 	public static void exibirOpcoes() {
 		
-		// Atualiza a lista de comandos
-		listaDeComandos.clear();
-		listaDeComandos.add(0);
-		listaDeComandos.add(1);
-		
 		// Exibe as opcões
-		System.out.println("----------------------");
-		System.out.println("");
 		System.out.println("Bem-vindo a TerminalOS");
-		System.out.println("");
-		System.out.println("----------------------");
-		System.out.println("");
 		System.out.println("0 - Iniciar emulador");
 		System.out.println("1 - Sair");
-		System.out.println("");
 	}
 	
 	// Método para pegar a entrada do usuário
@@ -76,15 +68,10 @@ class Menu {
 		while (!entradaValida) {
 			
 			// Pede ao usuário digitar algo
-			System.out.println("Digite um opção e aperte enter");
-			System.out.println("");
-			System.out.println("------------------------------");
+			System.out.print("Digite um opção e aperte enter ");
 			
 			// Pega a entrada do usuário
-			System.out.println("");
 			entradaDoUsuario = scanner.nextLine();
-			System.out.println("");
-			System.out.println("----------------------");
 			
 			// Bloco de tentativa 
 			try {
@@ -97,13 +84,62 @@ class Menu {
 			} catch (NumberFormatException e) {
 				
 				// Trata o erro
-				System.out.println("Você tem que digitar um número inteiro");
-				System.out.println("");
-				System.out.println("--------------------------------------");
+				System.out.println("Erro: um número válido não foi inserido");
+				erros++;
 			}
+		}
+		
+		// Verifica a entrada 
+		switch (entradaDoUsuarioNumero) {
+			case 0: 
+				new Emulador();
+				break;
+			case 1:
+				System.out.println("Encerrando o programa...");
+				waitTime(2000);
+				System.out.println("Erros durante a execução: " + erros);
+				System.out.println("Programa encerrado");
+				System.exit(0);
+			default:
+				System.out.println("Erro: opção inválida escolhida");
+				erros++;
+				break;
 		}
 		
 		// Muda entrada válida para false
 		entradaValida = false;
 	}
+	
+	public static void waitTime(int tempo) {
+		try {
+			Thread.sleep(tempo); 
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			System.err.println("A espera foi interrompida.");
+		}
+	}
+	
+	// Método de inicialização falsa
+	public static void inicializacao() {
+		
+		// Inicialização falsa do programa
+		System.out.println("O sistema está iniciando...");
+		System.out.println("Carregando dados...");
+		waitTime(1500);
+		System.out.println("Dados carregados");
+		System.out.println("Verificando cache...");
+		waitTime(2000);
+		System.out.println("Cache verificado");
+		System.out.println("Criando cache anteriormente não criado...");
+		waitTime(500);
+		System.out.println("Cache criado");
+		System.out.println("Programa iniciado");
+	}
 }
+
+
+
+
+
+
+
