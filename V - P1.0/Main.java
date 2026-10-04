@@ -31,12 +31,11 @@ class Emulador {
 		// Loop principal
 		while (sistemaRodando) {
 			
-			
 		}
 	}
 	
 	// Método de inicialização falsa
-	public static void inicializar(estadoDoSistema) {
+	public static void inicializar(int estadoDoSistema) {
 		
 		// Aqui começa a falsa inicialização
 		System.out.println("Bem-vindo(A) a o TerminalOS, seu sistema está sendo iniciado...");
@@ -58,6 +57,16 @@ class Emulador {
 		System.out.println("GERENCIADOR-DE-ARQUIVOS: Diretórios essenciais carregados");
 		System.out.println("SISTEMA: Seu sistema está pronto para funcionar");
 		waitTime(2500 + (estadoDoSistema * 100));
+	}
+	
+	// Método que recebe um valor e espera o valor recebido
+	public static void waitTime(int tempo) {
+		try {
+			Thread.sleep(tempo); 
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			System.err.println("A espera foi interrompida.");
+		}
 	}
 }
 
@@ -147,6 +156,7 @@ class Menu {
 		entradaValida = false;
 	}
 	
+	// Método que recebe um valor e espera o valor recebido
 	public static void waitTime(int tempo) {
 		try {
 			Thread.sleep(tempo); 
