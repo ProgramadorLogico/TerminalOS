@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="500"
+   viewBox="0 0 132.29166 132.29167"
+   version="1.1"
+   id="svg185"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="Logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview187"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.1064394"
+     inkscape:cx="216.91202"
+     inkscape:cy="249.90072"
+     inkscape:window-width="1600"
+     inkscape:window-height="824"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g6520" />
+  <defs
+     id="defs182">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6631">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.30744666;"
+         offset="0"
+         id="stop6627" />
+      <stop
+         style="stop-color:#1c1c1c;stop-opacity:0;"
+         offset="1"
+         id="stop6629" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6534">
+      <stop
+         style="stop-color:#1c1c1c;stop-opacity:1"
+         offset="0"
+         id="stop6530" />
+      <stop
+         style="stop-color:#b3b3b3;stop-opacity:1"
+         offset="1"
+         id="stop6532" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6534"
+       id="linearGradient6536"
+       x1="83.252045"
+       y1="48.385612"
+       x2="-0.97329259"
+       y2="131.09378"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6631"
+       id="linearGradient6633"
+       x1="51.707745"
+       y1="114.98164"
+       x2="72.548134"
+       y2="43.106682"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g6520"
+       style="fill-opacity:1;fill:#1c1c1c">
+      <text
+         xml:space="preserve"
+         style="font-size:26.4583px;font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#1c1c1c;fill-opacity:1;stroke-width:1.97776;stroke-linejoin:round"
+         x="42.568836"
+         y="39.695297"
+         id="text1034"><tspan
+           sodipodi:role="line"
+           id="tspan1032"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Share Tech Mono';-inkscape-font-specification:'Share Tech Mono';fill:#1c1c1c;fill-opacity:1;stroke-width:1.97776"
+           x="42.568836"
+           y="39.695297" /></text>
+      <rect
+         style="fill:#1c1c1c;fill-opacity:1;stroke:#2b2b2b;stroke-width:1.18945;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect358"
+         width="131.10222"
+         height="131.10222"
+         x="0.52914542"
+         y="0.59472501"
+         ry="17.648207" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.7599px;font-family:'Share Tech Mono';-inkscape-font-specification:'Share Tech Mono';fill:#ffffff;fill-opacity:1;stroke-width:4.24282;stroke-linejoin:round"
+         x="1.5446247"
+         y="45.817348"
+         id="text3122"><tspan
+           sodipodi:role="line"
+           id="tspan3120"
+           style="stroke-width:4.24282;fill-opacity:1;fill:#ffffff"
+           x="1.5446247"
+           y="45.817348">&gt;_OS</tspan></text>
+      <rect
+         style="fill:url(#linearGradient6633);fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect358-6"
+         width="132.29166"
+         height="132.29166"
+         x="5e-07"
+         y="5e-07"
+         ry="17.808323" />
+    </g>
+  </g>
+</svg>

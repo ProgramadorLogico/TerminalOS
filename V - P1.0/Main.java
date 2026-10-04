@@ -15,12 +15,49 @@ public class Main {
 	}
 }
 
-// Classe que emula o sistema operacional
+// Classe que emula o sistema operacional falso
 class Emulador {
+	
+	// Variáveis
+	private static boolean sistemaRodando = true;
+	private static boolean usuarioLogado = false;
 	
 	// Construtor do sistema
 	public Emulador() {
 		
+		// Inicialização falsa do sistema
+		inicializar(1);
+		
+		// Loop principal
+		while (sistemaRodando) {
+			
+			
+		}
+	}
+	
+	// Método de inicialização falsa
+	public static void inicializar(estadoDoSistema) {
+		
+		// Aqui começa a falsa inicialização
+		System.out.println("Bem-vindo(A) a o TerminalOS, seu sistema está sendo iniciado...");
+		System.out.println("Versão do kernel: 1.4-relativo");
+		System.out.println("CPU: CPU-genérica");
+		System.out.println("GERENCIADOR-DE-DISCOS: Novo dispositivo conectado, Pendrive-fotos-da-familia");
+		System.out.println("GERENCIADOR-DE-DISCOS: Partição SSD Sata montada");
+		waitTime(2000 + (estadoDoSistema * 100));
+		System.out.println("GERENCIADOR-DE-USUARIOS: Entrando como root, primeira inicialização");
+		waitTime(1000 + (estadoDoSistema * 100));
+		System.out.println("GERENCIADOR-DE-REDE: Configurando rede...");
+		waitTime(800 + (estadoDoSistema * 100));
+		System.out.println("GERENCIADOR-DE-REDE: Endereço IP local atribuído: 999.999.9.99");
+		System.out.println("GERENCIADOR-DE-SEGURANÇA: Carregando sistema de segurança...");
+		waitTime(1200 + (estadoDoSistema * 100));
+		System.out.println("GERENCIADOR-DE-SEGURANÇA: Sistema de segurança ativado e em modo de instabilidade");
+		System.out.println("GERENCIADOR-DE-ARQUIVOS: Verificando integridade do sistema...");
+		waitTime(1000 + (estadoDoSistema * 100));
+		System.out.println("GERENCIADOR-DE-ARQUIVOS: Diretórios essenciais carregados");
+		System.out.println("SISTEMA: Seu sistema está pronto para funcionar");
+		waitTime(2500 + (estadoDoSistema * 100));
 	}
 }
 
