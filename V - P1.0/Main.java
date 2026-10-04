@@ -21,6 +21,10 @@ class Emulador {
 	// Variáveis
 	private static boolean sistemaRodando = true;
 	private static boolean usuarioLogado = false;
+	public static Scanner scanner = new Scanner(System.in);
+	private static String entrada = null;
+	private static boolean sistemaInstalado = false;
+	private static List<String> comandos = new ArrayList<> (Arrays.asList("listCommands", "version", "shotdown"));
 	
 	// Construtor do sistema
 	public Emulador() {
@@ -28,9 +32,22 @@ class Emulador {
 		// Inicialização falsa do sistema
 		inicializar(1);
 		
+		// Loop de instalação
+		while (!sistemaInstalado) {
+			
+			// Pede a entrada inicial
+			captarEntrada("system-install");
+			
+			// Verifica a entrada
+			verificarEntrada(2);
+		}
+		
 		// Loop principal
 		while (sistemaRodando) {
 			
+			// Pede o comando
+			captarEntrada("~");
+			verificarEntrada(1);
 		}
 	}
 	
@@ -38,24 +55,30 @@ class Emulador {
 	public static void inicializar(int estadoDoSistema) {
 		
 		// Aqui começa a falsa inicialização
-		System.out.println("Bem-vindo(A) a o TerminalOS, seu sistema está sendo iniciado...");
-		System.out.println("Versão do kernel: 1.4-relativo");
-		System.out.println("CPU: CPU-genérica");
-		System.out.println("GERENCIADOR-DE-DISCOS: Novo dispositivo conectado, Pendrive-fotos-da-familia");
-		System.out.println("GERENCIADOR-DE-DISCOS: Partição SSD Sata montada");
+		waitTime(500);
+		print(1, "╭──────────────────────────╮");
+		print(1, "│      BIOS - PLACA MÃE    │");
+		print(1, "╰──────────────────────────╯");
+		waitTime(2000);
+		print(1, "Bem-vindo(A) a o TerminalOS, seu sistema está sendo iniciado...");
+		waitTime(2000);
+		print(1, "Versão do kernel: 1.4-relativo");
+		print(1, "CPU: CPU-genérica");
+		print(1, "GERENCIADOR-DE-DISCOS: Novo dispositivo conectado, Pendrive-fotos-da-familia");
+		print(1, "GERENCIADOR-DE-DISCOS: Partição SSD Sata montada");
 		waitTime(2000 + (estadoDoSistema * 100));
-		System.out.println("GERENCIADOR-DE-USUARIOS: Entrando como root, primeira inicialização");
+		print(1, "GERENCIADOR-DE-USUARIOS: Entrando como root, primeira inicialização");
 		waitTime(1000 + (estadoDoSistema * 100));
-		System.out.println("GERENCIADOR-DE-REDE: Configurando rede...");
+		print(1, "GERENCIADOR-DE-REDE: Configurando rede...");
 		waitTime(800 + (estadoDoSistema * 100));
-		System.out.println("GERENCIADOR-DE-REDE: Endereço IP local atribuído: 999.999.9.99");
-		System.out.println("GERENCIADOR-DE-SEGURANÇA: Carregando sistema de segurança...");
+		print(1, "GERENCIADOR-DE-REDE: Endereço IP local atribuído: 999.999.9.99");
+		print(1, "GERENCIADOR-DE-SEGURANÇA: Carregando sistema de segurança...");
 		waitTime(1200 + (estadoDoSistema * 100));
-		System.out.println("GERENCIADOR-DE-SEGURANÇA: Sistema de segurança ativado e em modo de instabilidade");
-		System.out.println("GERENCIADOR-DE-ARQUIVOS: Verificando integridade do sistema...");
+		print(1, "GERENCIADOR-DE-SEGURANÇA: Sistema de segurança ativado e em modo de instabilidade");
+		print(1, "GERENCIADOR-DE-ARQUIVOS: Verificando integridade do sistema...");
 		waitTime(1000 + (estadoDoSistema * 100));
-		System.out.println("GERENCIADOR-DE-ARQUIVOS: Diretórios essenciais carregados");
-		System.out.println("SISTEMA: Seu sistema está pronto para funcionar");
+		print(1, "GERENCIADOR-DE-ARQUIVOS: Diretórios essenciais carregados");
+		print(1, "SISTEMA: Seu sistema está pronto para funcionar");
 		waitTime(2500 + (estadoDoSistema * 100));
 	}
 	
@@ -66,6 +89,174 @@ class Emulador {
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 			System.err.println("A espera foi interrompida.");
+		}
+	}
+	
+	// Método para captar a entrada do usuário
+	public static void captarEntrada(String local) {
+		
+		// Verifica qual escolher
+		if (!sistemaInstalado) {
+		
+			// Printa a mensagem e pede a entrada
+			print(0, "root@EMULADOR:/" + local + "/# ");
+			String entradaRecebida = scanner.nextLine();
+			entrada = entradaRecebida;
+		
+		// Senão
+		} else {
+			
+			// Printa a mensagem e pede a entrada
+			print(0, "admin1@EMULADOR:" + local + "$ ");
+			String entradaRecebida = scanner.nextLine();
+			entrada = entradaRecebida;
+		}
+	}
+	
+	// Método de print
+	public static void print(int tipo, String mensagem) {
+		
+		// Verifica o tipo
+		if (tipo == 0) {
+			System.out.print(mensagem);
+		} else if (tipo == 1) {
+			System.out.println(mensagem);
+		} else if (tipo == 2) {
+			System.err.println(mensagem);
+		}
+	}
+	
+	// Método que verifica a entrada
+	public static void verificarEntrada(int entradaAVerificar) {
+		
+		// Se for 1
+		if (entradaAVerificar == 1) {
+			
+			// Verifica a entrada
+			switch (entrada) {
+				
+				// Caso seja listComands
+				case "listCommands":
+					listarComandos();
+					break;
+				
+				// Caso seja version
+				case "version":
+					exibirVersao();
+					break;
+					
+				// Caso seja shutdown
+				case "shutdown":
+					desligarSistema();
+					break;
+			}
+		
+		// Se for 2
+		} else if (entradaAVerificar == 2 && !sistemaInstalado) {
+			
+			// Verifica a entrada
+			switch (entrada) {
+				
+				// Caso seja installSystem
+				case "installSystem":
+					instalacaoFalsa();
+					break;
+				
+				// Caso não seja nenhum
+				default:
+					print(2, "ROOT: Comando inválido!");
+					print(1, "SISTEMA: Foi detectado que o sistema inteiro não foi instalado execute installSystem para instalar o sistema completo");
+					break;
+			}
+		}
+	}
+	
+	// Método que cria uma instalação falsa
+	public static void instalacaoFalsa() {
+		
+		// Aqui começa a falsa instalação do sistema
+		waitTime(1500);
+		print(1, "Iniciando a instalação do TerminalOS...");
+		waitTime(2000);
+		print(1, "INSTALADOR: Localizando dispositivo de destino...");
+		waitTime(1200);
+		print(1, "INSTALADOR: Criando tabela de partições GPT...");
+		waitTime(2000);
+		print(1, "INSTALADOR: Formatando partição de sistema em ext4...");
+		waitTime(2000);
+		print(1, "INSTALADOR: Copiando arquivos do sistema base...");
+		waitTime(1000);
+		print(1, "  ↳ [█░░░░░░░░░] 10% - Extraindo pacotes do kernel...");
+		waitTime(5000);
+		print(1, "  ↳ [████░░░░░░] 40% - Configurando utilitários de linha de comando...");
+		waitTime(1800);
+		print(1, "  ↳ [███████░░░] 70% - Instalando dependências e bibliotecas Java...");
+		waitTime(1500);
+		print(1, "  ↳ [██████████] 100% - Arquivos copiados com sucesso!");
+		print(1, "INSTALADOR: Gerando arquivos...");
+		waitTime(1200);
+		print(1, "INSTALADOR: Instalando carregador de inicialização em /dev/sda...");
+		waitTime(1500);
+		print(1, "GERENCIADOR-DE-USUARIOS: Criando usuário administrador...");
+		waitTime(100);
+		print(1, "GERENCIADOR-DE-ARQUIVOS: Criando diretórios padrão (/bin, /etc, /usr, /home)...");
+		waitTime(1000);
+		print(1, "INSTALADOR: Limpando arquivos temporários da instalação...");
+		waitTime(800);
+		print(1, "SISTEMA: Instalação do TerminalOS concluída com sucesso!");
+		print(1, "SISTEMA: O TerminalOS está se preparando para a primeira inicialização, isso pode levar um tempo...");
+		waitTime(10000);
+		sistemaInstalado = true;
+	}
+	
+	// Método para exibir a versão
+	public static void exibirVersao() {
+		
+		// Exibição do comando version
+		waitTime(700);
+		print(1, "╭──────────────────────────╮");
+		print(1, "│    INFORMAÇÕES DE VERSÃO │");
+		print(1, "╰──────────────────────────╯");
+		print(1, "SISTEMA: TerminalOS");
+		print(1, "VERSÃO: Protótico");
+		print(1, "ARQUITETURA: ext4");
+		print(1, "KERNEL: 1.4-relativo");
+	}
+	
+	// Método para desligar o sistema
+	public static void desligarSistema() {
+		
+		// Aqui começa a sequência de desligamento do sistema
+		waitTime(1500);
+		print(1, "SISTEMA: Sistema está encerrando...");
+		waitTime(1000);
+		print(1, "GERENCIADOR-DE-ARQUIVOS: Salvando dados no disco...");
+		waitTime(3000);
+		print(1, "GERENCIADOR-DE-USUARIOS: Encerrando sessões de usuários...");
+		waitTime(1200);
+		print(1, "GERENCIADOR-DE-REDE: Desconectando da rede...");
+		waitTime(1000);
+		print(1, "GERENCIADOR-DE-SEGURANÇA: Desativando subsistemas...");
+		waitTime(1000);
+		print(1, "GERENCIADOR-DE-DISCOS: Desmontando partições do sistema...");
+		waitTime(1800);
+		print(1, "SISTEMA: Todos os serviços foram finalizados com segurança.");
+		print(1, "BIOS: Sistema desligado.");
+		waitTime(1500);
+		
+		// Encerra de verdade
+		sistemaRodando = false;
+		
+		// Cria um novo Menu
+		new Menu();
+	}
+	
+	// Método que lista todos os comandos
+	public static void listarComandos() {
+		
+		// Loop para listagem
+		for(int i = 0; i < comandos.size(); i++) {
+			System.out.println(comandos.get(i));
 		}
 	}
 }
@@ -183,10 +374,3 @@ class Menu {
 		System.out.println("Programa iniciado");
 	}
 }
-
-
-
-
-
-
-
