@@ -24,7 +24,7 @@ class Emulador {
 	public static Scanner scanner = new Scanner(System.in);
 	private static String entrada = null;
 	private static boolean sistemaInstalado = false;
-	private static List<String> comandos = new ArrayList<> (Arrays.asList("listCommands", "version", "shotdown"));
+	private static List<String> comandos = new ArrayList<> (Arrays.asList("listCommands", "version", "shutdown"));
 	
 	// Construtor do sistema
 	public Emulador() {
@@ -47,6 +47,8 @@ class Emulador {
 			
 			// Pede o comando
 			captarEntrada("~");
+			
+			// Verifica a entrada
 			verificarEntrada(1);
 		}
 	}
@@ -149,6 +151,17 @@ class Emulador {
 				case "shutdown":
 					desligarSistema();
 					break;
+				
+				// Caso não seja nenhum
+				default:
+					
+					// Verifica a entrada
+					if (entrada == "") {
+						break;
+					} else {
+						print(2, "SISTEMA: Você não digitou um comando válido!");
+						break;
+					}
 			}
 		
 		// Se for 2
@@ -214,9 +227,9 @@ class Emulador {
 		
 		// Exibição do comando version
 		waitTime(700);
-		print(1, "╭──────────────────────────╮");
-		print(1, "│    INFORMAÇÕES DE VERSÃO │");
-		print(1, "╰──────────────────────────╯");
+		print(1, "╭───────────────────────────────╮");
+		print(1, "│     INFORMAÇÕES DE VERSÃO     │");
+		print(1, "╰───────────────────────────────╯");
 		print(1, "SISTEMA: TerminalOS");
 		print(1, "VERSÃO: Protótico");
 		print(1, "ARQUITETURA: ext4");
@@ -244,15 +257,18 @@ class Emulador {
 		print(1, "BIOS: Sistema desligado.");
 		waitTime(1500);
 		
-		// Encerra de verdade
-		sistemaRodando = false;
-		
-		// Cria um novo Menu
-		new Menu();
+		// Encerra o programa
+		System.exit(0);
 	}
 	
 	// Método que lista todos os comandos
 	public static void listarComandos() {
+		
+		// Mostra o menu
+		waitTime(700);
+		print(1, "╭───────────────────────────╮");
+		print(1, "│     Lista de comandos     │");
+		print(1, "╰───────────────────────────╯");
 		
 		// Loop para listagem
 		for(int i = 0; i < comandos.size(); i++) {
@@ -270,7 +286,6 @@ class Menu {
 	public static String entradaDoUsuario = null;
 	public static boolean entradaValida = false;
 	public static int entradaDoUsuarioNumero = 0;
-	public static int erros = 0;
 	
 	// Construtor da classe
 	public Menu() {
@@ -322,7 +337,6 @@ class Menu {
 				
 				// Trata o erro
 				System.out.println("Erro: um número válido não foi inserido");
-				erros++;
 			}
 		}
 		
@@ -334,12 +348,10 @@ class Menu {
 			case 1:
 				System.out.println("Encerrando o programa...");
 				waitTime(2000);
-				System.out.println("Erros durante a execução: " + erros);
 				System.out.println("Programa encerrado");
 				System.exit(0);
 			default:
 				System.out.println("Erro: opção inválida escolhida");
-				erros++;
 				break;
 		}
 		
