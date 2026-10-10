@@ -9,9 +9,9 @@ em um só lugar.
 
 --- 
 
-[!NOTE]
-O **TerminalOS** está em fase de desenvolvimento, então ele pode conter
-bugs e erros, então esperamos que vocês possam nos avisar.
+> [!NOTE]
+> O **TerminalOS** está em fase de desenvolvimento, então ele pode conter
+> bugs e erros, então esperamos que vocês possam nos avisar.
 
 --- 
 
