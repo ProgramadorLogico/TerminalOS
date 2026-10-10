@@ -20,4 +20,8 @@ em um só lugar.
 Para o futuro do **TerminalOS** temos muitas coisas a fazer, pensar e 
 planejar.
 
-[] `dada`
+1. Adicionar músicas e sons ao projeto
+2. Adicionar pequenos jogos simples
+3. Adicionar um comando de status do software
+
+Tudo isso e mais temos intensão de aplicar em futuros projetos.
