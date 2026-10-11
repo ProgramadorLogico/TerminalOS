@@ -26,27 +26,39 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="1.1064394"
-     inkscape:cx="216.91202"
-     inkscape:cy="249.90072"
+     inkscape:cx="159.06881"
+     inkscape:cy="275.20712"
      inkscape:window-width="1600"
      inkscape:window-height="824"
      inkscape:window-x="0"
      inkscape:window-y="38"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g6520" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs182">
     <linearGradient
        inkscape:collect="always"
-       id="linearGradient6631">
+       id="linearGradient1707">
       <stop
-         style="stop-color:#000000;stop-opacity:0.30744666;"
+         style="stop-color:#2d2d2d;stop-opacity:1;"
          offset="0"
-         id="stop6627" />
+         id="stop1703" />
       <stop
-         style="stop-color:#1c1c1c;stop-opacity:0;"
+         style="stop-color:#4f4f4f;stop-opacity:1;"
          offset="1"
-         id="stop6629" />
+         id="stop1705" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1637">
+      <stop
+         style="stop-color:#f3f3f3;stop-opacity:0.57647061;"
+         offset="0"
+         id="stop1633" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop1635" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -71,59 +83,84 @@
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient6631"
-       id="linearGradient6633"
-       x1="51.707745"
-       y1="114.98164"
-       x2="72.548134"
-       y2="43.106682"
+       xlink:href="#linearGradient1637"
+       id="linearGradient1631"
+       x1="0.2058191"
+       y1="132.26979"
+       x2="131.45084"
+       y2="0.7159934"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1707"
+       id="linearGradient1709"
+       x1="0.096708879"
+       y1="132.50258"
+       x2="132.74257"
+       y2="0.98455322"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter2331"
+       x="-0.022123587"
+       y="-0.082963454"
+       width="1.0719017"
+       height="1.2696312">
+      <feFlood
+         flood-opacity="0.431373"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood2321" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite2323" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="1"
+         result="blur"
+         id="feGaussianBlur2325" />
+      <feOffset
+         dx="3"
+         dy="3"
+         result="offset"
+         id="feOffset2327" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite2329" />
+    </filter>
   </defs>
   <g
      inkscape:label="Camada 1"
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g6520"
-       style="fill-opacity:1;fill:#1c1c1c">
+       id="g2733">
+      <rect
+         style="fill:url(#linearGradient1709);fill-opacity:1;stroke-width:0.705804;stroke-linejoin:round"
+         id="rect377"
+         width="132.29167"
+         height="132.29167"
+         x="-8.8817842e-16"
+         y="1.7763568e-15"
+         ry="34.667118" />
       <text
          xml:space="preserve"
-         style="font-size:26.4583px;font-family:Montserrat;-inkscape-font-specification:Montserrat;fill:#1c1c1c;fill-opacity:1;stroke-width:1.97776;stroke-linejoin:round"
-         x="42.568836"
-         y="39.695297"
-         id="text1034"><tspan
+         style="font-size:28.9284px;font-family:'Share Tech Mono';-inkscape-font-specification:'Share Tech Mono';fill:url(#linearGradient1631);fill-opacity:1;stroke-width:0.408759;stroke-linejoin:round;filter:url(#filter2331)"
+         x="8.7319288"
+         y="39.787716"
+         id="text1097"><tspan
            sodipodi:role="line"
-           id="tspan1032"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Share Tech Mono';-inkscape-font-specification:'Share Tech Mono';fill:#1c1c1c;fill-opacity:1;stroke-width:1.97776"
-           x="42.568836"
-           y="39.695297" /></text>
-      <rect
-         style="fill:#1c1c1c;fill-opacity:1;stroke:#2b2b2b;stroke-width:1.18945;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-         id="rect358"
-         width="131.10222"
-         height="131.10222"
-         x="0.52914542"
-         y="0.59472501"
-         ry="17.648207" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56.7599px;font-family:'Share Tech Mono';-inkscape-font-specification:'Share Tech Mono';fill:#ffffff;fill-opacity:1;stroke-width:4.24282;stroke-linejoin:round"
-         x="1.5446247"
-         y="45.817348"
-         id="text3122"><tspan
-           sodipodi:role="line"
-           id="tspan3120"
-           style="stroke-width:4.24282;fill-opacity:1;fill:#ffffff"
-           x="1.5446247"
-           y="45.817348">&gt;_OS</tspan></text>
-      <rect
-         style="fill:url(#linearGradient6633);fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-         id="rect358-6"
-         width="132.29166"
-         height="132.29166"
-         x="5e-07"
-         y="5e-07"
-         ry="17.808323" />
+           id="tspan1095"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P';fill:url(#linearGradient1631);fill-opacity:1;stroke-width:0.408759"
+           x="8.7319288"
+           y="39.787716">&gt;_OS</tspan></text>
     </g>
   </g>
 </svg>

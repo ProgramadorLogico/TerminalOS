@@ -28,7 +28,13 @@ class Emulador {
 	private static List<String> comandos = new ArrayList<> (Arrays.asList("help", "ver", "shutdown",  "cls", "rand"));
 	public static Random random = new Random();
 	private static List<String> dispositivosConectados = new ArrayList<> ();
-	private static List<> moldeDeDispositivos = new ArrayList<> (); // Parei aqui
+	private static List<> moldeDeDispositivos = new ArrayList<> ();
+	private static String versaoDoProjeto = "Alpha 1.0";
+	private static String versaoDoKernel = "2.0 Positivo";
+	private static String CPU = "AMD Ryzen 5 5600";
+	private static String GPU = "RTX 5060 Ti";
+	private static String placaMae = "ASUS TUF Gaming B550M-Plus";
+	private static String fonte = "MSI MAG A650BN";
 	
 	// Construtor do sistema
 	public Emulador() {
@@ -40,7 +46,7 @@ class Emulador {
 		while (!sistemaInstalado) {
 			
 			// Pede a entrada inicial
-			captarEntrada("system-install");
+			captarEntrada();
 			
 			// Verifica a entrada
 			verificarEntrada(2);
@@ -50,7 +56,7 @@ class Emulador {
 		while (sistemaRodando) {
 			
 			// Pede o comando
-			captarEntrada("~");
+			captarEntrada();
 			
 			// Verifica a entrada
 			verificarEntrada(1);
@@ -61,37 +67,39 @@ class Emulador {
 	public static void inicializar(int estadoDoSistema) {
 		
 		// Aqui começa a falsa inicialização
-		waitTime(500);
+		waitTime(1000);
 		print(1, "╭──────────────────────────╮");
 		print(1, "│      BIOS - PLACA MÃE    │");
 		print(1, "╰──────────────────────────╯");
 		waitTime(2000);
-		print(1, "Bem-vindo(A) a o TerminalOS, seu sistema está sendo iniciado...");
+		print(1, "Bem-vindo(A) a o TerminalOS, o sistema está sendo iniciado...");
 		waitTime(2000);
-		print(1, "Versão do kernel: 1.4-relativo");
-		print(1, "CPU: CPU-genérica");
-		print(1, "GERENCIADOR-DE-DISCOS: Novo dispositivo conectado, Pendrive-fotos-da-familia");
-		print(1, "GERENCIADOR-DE-DISCOS: Partição SSD Sata montada");
-		waitTime(2000 + (estadoDoSistema * 100));
-		print(1, "GERENCIADOR-DE-USUARIOS: Entrando como root, primeira inicialização");
-		waitTime(1000 + (estadoDoSistema * 100));
-		print(1, "GERENCIADOR-DE-REDE: Configurando rede...");
-		waitTime(800 + (estadoDoSistema * 100));
-		print(1, "GERENCIADOR-DE-REDE: Endereço IP local atribuído: 999.999.9.99");
-		print(1, "GERENCIADOR-DE-SEGURANÇA: Carregando sistema de segurança...");
-		waitTime(1200 + (estadoDoSistema * 100));
-		print(1, "GERENCIADOR-DE-SEGURANÇA: Sistema de segurança ativado e em modo de instabilidade");
-		print(1, "GERENCIADOR-DE-ARQUIVOS: Verificando integridade do sistema...");
-		waitTime(1000 + (estadoDoSistema * 100));
-		print(1, "GERENCIADOR-DE-ARQUIVOS: Diretórios essenciais carregados");
-		print(1, "SISTEMA: Seu sistema está pronto para funcionar");
-		waitTime(2500 + (estadoDoSistema * 100));
+		System.out.println("Versão do kernel: " + versaoDoKernel);
+		System.out.println("SISTEMA: CPU: " + CPU);
+		System.out.println("SISTEMA: GPU: " + GPU);
+		System.out.println("SISTEMA: Placa mãe: " + placaMae);
+		System.out.println("SISTEMA: Fonte: " + fonte);
+		print(1, "GERENCIADOR-DE-DISCOS: Nenhuma partição fixa encontrada");
+		waitTime(2000);
+		print(1, "GERENCIADOR-DE-DISCOS: Carregando dados básicos...");
+		waitTime(1000);
+		print(1, "GERENCIADOR-DE-SEGURANÇA: Verificando a segurança da ISO...");
+		waitTime(2000);
+		print(1, "GERENCIADOR-DE-ARQUIVOS: Verificando a Chave de validação da ISO...");
+		waitTime(3000);
+		print(1, "GERENCIADOR-DE-ARQUIVOS: Diretório inicial carregado");
+		print(1, "SISTEMA: Seu sistema está pronto para ser instalado");
+		waitTime(2500);
 	}
 	
 	// Método que recebe um valor e espera o valor recebido
 	public static void waitTime(int tempo) {
+		
+		// Tenta esperar
 		try {
 			Thread.sleep(tempo); 
+			
+		// Caso de erro
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 			System.err.println("A espera foi interrompida.");
@@ -99,13 +107,13 @@ class Emulador {
 	}
 	
 	// Método para captar a entrada do usuário
-	public static void captarEntrada(String local) {
+	public static void captarEntrada() {
 		
 		// Verifica qual escolher
 		if (!sistemaInstalado) {
 		
 			// Printa a mensagem e pede a entrada
-			print(0, "root@EMULADOR:/" + local + "/# ");
+			print(0, "root@EMULADOR:/# ");
 			String entradaRecebida = scanner.nextLine();
 			entrada = entradaRecebida;
 		
@@ -113,7 +121,7 @@ class Emulador {
 		} else {
 			
 			// Printa a mensagem e pede a entrada
-			print(0, "admin1@EMULADOR:" + local + "$ ");
+			print(0, "admin1@EMULADOR:/$ ");
 			String entradaRecebida = scanner.nextLine();
 			entrada = entradaRecebida;
 		}
@@ -185,21 +193,26 @@ class Emulador {
 			switch (entrada) {
 				
 				// Caso seja installSystem
-				case "installSystem":
+				case "sudo su installSystem":
 					instalacaoFalsa();
 					break;
 				
 				// Caso não seja nenhum
 				default:
-					print(2, "ROOT: Comando inválido!");
-					print(1, "SISTEMA: Foi detectado que o sistema inteiro não foi instalado execute installSystem para instalar o sistema completo");
-					break;
+				 
+					// Verifica se a entrada é nula
+					if (entrada == "") {
+						break;
+					} else {
+						print(1, "SISTEMA: O TerminalOS não está instalado, digite sudo su installSystem para instalar o sistema");
+						break;
+					}
 			}
 		}
 	}
 	
 	// Método que cria uma instalação falsa
-	public static void instalacaoFalsa() {
+	public static void instalacaoFalsa() { // Parei aqui
 		
 		// Aqui começa a falsa instalação do sistema
 		waitTime(1500);
@@ -240,36 +253,52 @@ class Emulador {
 	public static void exibirVersao() {
 		
 		// Exibição do comando version
-		waitTime(700);
+		waitTime(1000);
 		print(1, "╭───────────────────────────────╮");
 		print(1, "│     INFORMAÇÕES DE VERSÃO     │");
 		print(1, "╰───────────────────────────────╯");
-		print(1, "SISTEMA: TerminalOS");
-		print(1, "VERSÃO: Protótico");
-		print(1, "ARQUITETURA: ext4");
-		print(1, "KERNEL: 1.4-relativo");
+		System.out.println("SISTEMA: TerminalOS");
+		System.out.println("VERSÃO: " + versaoDoProjeto);
+		System.out.println("ARQUITETURA: ext4");
+		System.out.println("KERNEL: " + versaoDoKernel);
 	}
 	
 	// Método para desligar o sistema
-	public static void desligarSistema() {
+	public static void desligarSistema() { // Parei aqui
 		
 		// Aqui começa a sequência de desligamento do sistema
-		waitTime(1500);
-		print(1, "SISTEMA: Sistema está encerrando...");
-		waitTime(1000);
-		print(1, "GERENCIADOR-DE-ARQUIVOS: Salvando dados no disco...");
-		waitTime(3000);
-		print(1, "GERENCIADOR-DE-USUARIOS: Encerrando sessões de usuários...");
-		waitTime(1200);
-		print(1, "GERENCIADOR-DE-REDE: Desconectando da rede...");
-		waitTime(1000);
-		print(1, "GERENCIADOR-DE-SEGURANÇA: Desativando subsistemas...");
-		waitTime(1000);
-		print(1, "GERENCIADOR-DE-DISCOS: Desmontando partições do sistema...");
-		waitTime(1800);
-		print(1, "SISTEMA: Todos os serviços foram finalizados com segurança.");
-		print(1, "BIOS: Sistema desligado.");
-		waitTime(1500);
+		
+		// Caso o sistema esteja instalado
+		if (sistemaInstalado) {
+			waitTime(1500);
+			print(1, "SISTEMA: Sistema está encerrando...");
+			waitTime(1000);
+			print(1, "GERENCIADOR-DE-ARQUIVOS: Salvando dados no disco...");
+			waitTime(3000);
+			print(1, "GERENCIADOR-DE-USUARIOS: Encerrando sessões de usuários...");
+			waitTime(1200);
+			print(1, "GERENCIADOR-DE-REDE: Desconectando da rede...");
+			waitTime(1000);
+			print(1, "GERENCIADOR-DE-SEGURANÇA: Desativando subsistemas...");
+			waitTime(1000);
+			print(1, "GERENCIADOR-DE-DISCOS: Desmontando partições do sistema...");
+			waitTime(1800);
+			print(1, "SISTEMA: Todos os serviços foram finalizados com segurança.");
+			print(1, "BIOS: Sistema desligado.");
+			waitTime(1500);
+		
+		// Caso o sistema não esteja instalado
+		} else {
+			waitTime(1000);
+			print(1, "SISTEMA: Sistema está encerrando...");
+			waitTime(3000);
+			print(1, "SISTEMA: AVISO: O sistema não está completamente instalado");
+			print(1, "GERENCIADOR-DE-DISCOS: Desativando serviços...");
+			waitTime(2000);
+			print(1, "SISTEMA: Todos os serviços foram finalizados com segurança");
+			waitTime(1500);
+			print(1, "BIOS: Pendrive1 removido");
+		}
 		
 		// Encerra o programa
 		System.exit(0);
