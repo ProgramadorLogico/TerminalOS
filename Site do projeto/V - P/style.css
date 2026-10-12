@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 body {
-	font-family: Open Sans;
-	background-color: #E6E6E6;
+	font-family: Space Grotesk;
+	background-color: #262626;
+	margin: 20px 10px 20px 10px;
 }
 
 html, body {
@@ -11,12 +13,19 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	background-color: #F2F2F2;
+	background-color: #1A1A1A;
 	padding: 10px;
 	border-radius: 20px; 
 	margin: 30px 0 30px 0;
+	color: #67D246;
+	font-family: JetBrains Mono;
 }
 
 h1 {
 	margin: 0 0 30px 0;
+	color: #4AD91E;
+}
+
+p {
+	color: #C2C2C2;
 }
