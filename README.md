@@ -1,7 +1,5 @@
 # TerminalOS
 
----
-
 O **TerminalOS** é um sistema operacional **falso** que emula um sistema
 real de terminal, ainda somos uma equipe pequena e temos muitas 
 dificuldades, futuramente criarei um site para podermos ter tudo isso
@@ -25,3 +23,13 @@ planejar.
 3. Adicionar um comando de status do software
 
 Tudo isso e mais temos intensão de aplicar em futuros projetos.
+
+--- 
+
+# Planejamento do projeto
+
+Nós temos um arquivo online de organização no app AFFiNE, um app de código aberto, 
+caso você queira que algo mude, seja removido ou adicionado, mande um e-mail para
+programador.godot@gmail.com.
+Este é o link para o AFFiNE
+https://app.affine.pro/workspace/8a3c71da-0093-4065-98bc-94c3bf0cb7f5/uxH8eZeZjPJyeSv6xJBVB?mode=edgeless
