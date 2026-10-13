@@ -28,4 +28,12 @@ h1 {
 
 p {
 	color: #C2C2C2;
+}^
+
+a {
+	color: #67d246;
+}
+
+a:hover {
+	color: #4ad91e;
 }
