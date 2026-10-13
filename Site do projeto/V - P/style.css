@@ -28,7 +28,7 @@ h1 {
 
 p {
 	color: #C2C2C2;
-}^
+}
 
 a {
 	color: #67d246;
@@ -36,4 +36,24 @@ a {
 
 a:hover {
 	color: #4ad91e;
+}
+
+button {
+	color: #2f9140;
+	border: solid 2px #2f9140;
+	border-radius: 10px;
+	background-color: #0d0d0d;
+	padding: 5px 7px 5px 7px;
+	margin: 10px;
+}
+
+button:hover {
+	color: #4ad91e;
+	background-color: 1a1a1a;
+	transform: scale(1.07);
+	border-color: #4ad91e;
+}
+
+button:active {
+	transform: scale(1.03);
 }
