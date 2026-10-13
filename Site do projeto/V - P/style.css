@@ -4,12 +4,12 @@
 body {
 	font-family: Space Grotesk;
 	background-color: #262626;
-	margin: 20px 10px 20px 10px;
+	margin: 0;
 }
 
 html, body {
 	max-width: 100%;
-	overflow-x: hidden;  
+	overflow-x: hidden; 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,4 +56,46 @@ button:hover {
 
 button:active {
 	transform: scale(1.03);
+}
+
+#rodape-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	grid-gap: 50px; 
+}
+
+#rodape {
+	border-top: solid 5px #0d0d0d;
+	background-color: #1a1a1a;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0 10px 0;
+}
+
+#body-gridprincipal {
+	display: grid;
+	grid-column: 1fr;
+	grid-row: 1fr 1fr;
+	grid-gap: 10px;
+	grid-template-areas:
+	"navegacao"
+	"corpo";
+	margin: 15px 15px 10px 15px;
+}
+
+#corpo {
+	grid-area: "corpo";
+}
+
+#navegacao {
+	grid-area: "navegacao";
+	border-bottom: solid 5px #0d0d0d;
+	background-color: #1a1a1a;
+	width: 100%;
+	padding: 20px 10px 10px 10px;
+	display: flex;
+	justify-content: row;
+	grid-gap: 20px;
 }
