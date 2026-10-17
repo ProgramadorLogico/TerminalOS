@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+/* Aqui ficam as tags */
 body {
 	font-family: Space Grotesk;
 	background-color: #262626;
@@ -16,19 +17,20 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #1A1A1A;
 	padding: 10px;
 	border-radius: 20px; 
-	margin: 30px 0 30px 0;
+	margin: 40px 0 40px 0;
 	color: #67D246;
 	font-family: JetBrains Mono;
 }
 
 h1 {
-	margin: 0 0 30px 0;
+	margin: 0 0 40px 0;
 	color: #4AD91E;
 }
 
 p {
 	color: #C2C2C2;
-}
+	line-height: 1.6; 
+} 
 
 a {
 	color: #67d246;
@@ -58,6 +60,14 @@ button:active {
 	transform: scale(1.03);
 }
 
+strong {
+	color: #67d246;
+	text-decoration: underlined;
+}
+
+/* Aqui ficam as classes */
+
+/* Aqui ficam os IDs */
 #rodape-links {
 	display: flex;
 	flex-direction: row;
@@ -77,20 +87,19 @@ button:active {
 #body-gridprincipal {
 	display: grid;
 	grid-column: 1fr;
-	grid-row: 1fr 1fr;
+	grid-row: 1fr;
 	grid-gap: 10px;
 	grid-template-areas:
-	"navegacao"
 	"corpo";
-	margin: 15px 15px 10px 15px;
+	margin: 15px 15px 15px 15px;
 }
 
 #corpo {
 	grid-area: "corpo";
+	margin: 30px 0 30px 0;
 }
 
 #navegacao {
-	grid-area: "navegacao";
 	border-bottom: solid 5px #0d0d0d;
 	background-color: #1a1a1a;
 	width: 100%;
