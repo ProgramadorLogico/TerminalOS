@@ -25,16 +25,18 @@ class Emulador {
 	public static Scanner scanner = new Scanner(System.in);
 	private static String entrada = null;
 	private static boolean sistemaInstalado = false;
-	private static List<String> comandos = new ArrayList<> (Arrays.asList("help", "ver", "shutdown",  "cls", "rand"));
 	public static Random random = new Random();
-	private static List<String> dispositivosConectados = new ArrayList<> ();
-	private static List<> moldeDeDispositivos = new ArrayList<> ();
 	private static String versaoDoProjeto = "Alpha 1.0";
 	private static String versaoDoKernel = "2.0 Positivo";
 	private static String CPU = "AMD Ryzen 5 5600";
 	private static String GPU = "RTX 5060 Ti";
 	private static String placaMae = "ASUS TUF Gaming B550M-Plus";
 	private static String fonte = "MSI MAG A650BN";
+
+	// Listas
+	private static List<String> dispositivosConectados = new ArrayList<> ();
+	private static List<String> moldeDeDispositivos = new ArrayList<> (Arays.asList("Kingston NV2", "Kingston NV3", "Kingston A400", "Western Digital WD Green", "Crucial BX500", "XPG SX8200 Pro", "ADATA"));
+	private static List<String> comandos = new ArrayList<> (Arrays.asList("help", "ver", "shutdown",  "cls", "rand"));
 	
 	// Construtor do sistema
 	public Emulador() {
@@ -216,7 +218,7 @@ class Emulador {
 	}
 	
 	// Método que cria uma instalação falsa
-	public static void instalacaoFalsa() { // Parei aqui
+	public static void instalacaoFalsa() { 
 		
 		// Aqui começa a falsa instalação do sistema
 		waitTime(1500);
@@ -324,6 +326,32 @@ class Emulador {
 	public static void limparTerminal() {
 		System.out.print("\033[?1049h");
 		System.out.print("\033[2J");
+	}
+
+	// Método que permiti a escolha de disco
+	public static void escolhaDeDisco() {
+
+		// Primeiro atualiza a lista de dispositivos
+		for (int i = 0; i < 3; i++) {
+			if (dispositivosConectados.contains(moldeDeDispositivos)) {
+				
+			} else {
+				dispositivosConectados.add(Arrays.asList(moldeDeDispositivos.get(i)));
+			}
+		}
+
+		// Depois pede o disco
+		print(1, "╭──────────────────────────╮");
+		print(1, "│     Escolha de disco     │");
+		print(1, "╰──────────────────────────╯");
+		
+		for(int i = 0; i < dispositivosConectados.size(); i++) {
+			System.out.println(i + " - " + dispositivosConectados.get(i));
+		}
+
+		if () {
+			
+		}
 	}
 }
 
