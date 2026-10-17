@@ -40,7 +40,7 @@ class Emulador {
 	public Emulador() {
 		
 		// Inicialização falsa do sistema
-		inicializar(1);
+		inicializar();
 		
 		// Loop de instalação
 		while (!sistemaInstalado) {
@@ -64,17 +64,21 @@ class Emulador {
 	}
 	
 	// Método de inicialização falsa
-	public static void inicializar(int estadoDoSistema) {
+	public static void inicializar() {
 		
 		// Aqui começa a falsa inicialização
 		waitTime(1000);
 		print(1, "╭──────────────────────────╮");
 		print(1, "│      BIOS - PLACA MÃE    │");
 		print(1, "╰──────────────────────────╯");
+		waitTime(500);
+		print(1, "BIOS: Preparando...");
 		waitTime(2000);
-		print(1, "Bem-vindo(A) a o TerminalOS, o sistema está sendo iniciado...");
+		print(1, "BIOS: Inicializando pendrive...");
+		waitTime(5000);
+		print(1, "SISTEMA: Bem-vindo(A) a o TerminalOS, o sistema está sendo iniciado...");
 		waitTime(2000);
-		System.out.println("Versão do kernel: " + versaoDoKernel);
+		System.out.println("SISTEMA: Versão do kernel: " + versaoDoKernel);
 		System.out.println("SISTEMA: CPU: " + CPU);
 		System.out.println("SISTEMA: GPU: " + GPU);
 		System.out.println("SISTEMA: Placa mãe: " + placaMae);
@@ -216,7 +220,7 @@ class Emulador {
 		
 		// Aqui começa a falsa instalação do sistema
 		waitTime(1500);
-		print(1, "Iniciando a instalação do TerminalOS...");
+		print(1, "SISTEMA: Iniciando a instalação do TerminalOS...");
 		waitTime(2000);
 		print(1, "INSTALADOR: Localizando dispositivo de destino...");
 		waitTime(1200);
@@ -230,7 +234,7 @@ class Emulador {
 		waitTime(5000);
 		print(1, "  ↳ [████░░░░░░] 40% - Configurando utilitários de linha de comando...");
 		waitTime(1800);
-		print(1, "  ↳ [███████░░░] 70% - Instalando dependências e bibliotecas Java...");
+		print(1, "  ↳ [███████░░░] 70% - Instalando dependências e bibliotecas...");
 		waitTime(1500);
 		print(1, "  ↳ [██████████] 100% - Arquivos copiados com sucesso!");
 		print(1, "INSTALADOR: Gerando arquivos...");
@@ -239,7 +243,7 @@ class Emulador {
 		waitTime(1500);
 		print(1, "GERENCIADOR-DE-USUARIOS: Criando usuário administrador...");
 		waitTime(100);
-		print(1, "GERENCIADOR-DE-ARQUIVOS: Criando diretórios padrão (/bin, /etc, /usr, /home)...");
+		print(1, "GERENCIADOR-DE-ARQUIVOS: Criando diretórios padrão...");
 		waitTime(1000);
 		print(1, "INSTALADOR: Limpando arquivos temporários da instalação...");
 		waitTime(800);
@@ -271,16 +275,14 @@ class Emulador {
 		// Caso o sistema esteja instalado
 		if (sistemaInstalado) {
 			waitTime(1500);
-			print(1, "SISTEMA: Sistema está encerrando...");
+			print(1, "SISTEMA: TerminalOS está encerrando...");
 			waitTime(1000);
 			print(1, "GERENCIADOR-DE-ARQUIVOS: Salvando dados no disco...");
 			waitTime(3000);
 			print(1, "GERENCIADOR-DE-USUARIOS: Encerrando sessões de usuários...");
 			waitTime(1200);
-			print(1, "GERENCIADOR-DE-REDE: Desconectando da rede...");
-			waitTime(1000);
-			print(1, "GERENCIADOR-DE-SEGURANÇA: Desativando subsistemas...");
-			waitTime(1000);
+			print(1, "GERENCIADOR-DE-SEGURANÇA: Desativando anti-vírus...");
+			waitTime(2000);
 			print(1, "GERENCIADOR-DE-DISCOS: Desmontando partições do sistema...");
 			waitTime(1800);
 			print(1, "SISTEMA: Todos os serviços foram finalizados com segurança.");
@@ -297,7 +299,6 @@ class Emulador {
 			waitTime(2000);
 			print(1, "SISTEMA: Todos os serviços foram finalizados com segurança");
 			waitTime(1500);
-			print(1, "BIOS: Pendrive1 removido");
 		}
 		
 		// Encerra o programa
