@@ -30,7 +30,7 @@ Tudo isso e mais temos intensão de aplicar em futuros projetos.
 
 Nós temos um arquivo online de organização no app AFFiNE, um app de código aberto, 
 caso você queira que algo mude, seja removido ou adicionado, mande um e-mail para
-programador.godot@gmail.com.
+programador.godot@gmail.com
 Este é o link para o AFFiNE
 https://app.affine.pro/workspace/8a3c71da-0093-4065-98bc-94c3bf0cb7f5/uxH8eZeZjPJyeSv6xJBVB?mode=edgeless
 
@@ -39,7 +39,7 @@ https://app.affine.pro/workspace/8a3c71da-0093-4065-98bc-94c3bf0cb7f5/uxH8eZeZjP
 # Site
 
 Nós estamos trabalhando em um site para o TerminalOS, como não possuimos dinheiro para hospedar um site em um endereço
-web, estão o site serve apenas como uma vitrine do projeto, você precisará baixar a pasta do site inteira para poder
+web, então o site serve apenas como uma vitrine do projeto, você precisará baixar a pasta do site inteira para poder
 visualizar o site.
 
 ---
