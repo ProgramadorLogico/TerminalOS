@@ -52,5 +52,5 @@ visualizar o site.
 > 3. Funções confusas
 > 4. Extensão do projeto
 >
-> Realmente eu não queria dar está notícia mas o **TerminalOS** ficará pausado por um tempo indeterminado, talvez precisando
-> do código rescrito do zero.
+> Realmente, eu não queria dar está notícia, mas o **TerminalOS** ficará pausado por um tempo indeterminado, talvez precisando
+> do código rescrito do **zero.**
