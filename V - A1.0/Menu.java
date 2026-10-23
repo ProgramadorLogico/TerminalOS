@@ -19,16 +19,18 @@ public class Menu {
 		log("Programa iniciado");
 
 		// Exibe o título
+		log("");
 		log("╔═══════════════════════════╗");
 		log("║     Menu - TerminalOS     ║");
 		log("╚═══════════════════════════╝");
 		log("");
 		log("1 - Iniciar sistema");
-		log("2 - Sair");
+		log("0 - Sair");
 
 		while(rodando) {
 
 			// Pega a entrada
+			log("");
 			entrada = Ferramentas.captarEntrada("Escolha uma opção acima: ");
 
 			// Verifica a entrada
@@ -41,11 +43,16 @@ public class Menu {
 					new Sistema();
 					break;
 
-				case "2":
+				case "0":
 					log("Encerrando o menu");
 					log("Volte sempre!");
 					rodando = false;
 					System.exit(0);
+					break;
+
+				default:
+					log("ERRO: Nenhuma opção válida encontrada");
+					log("Tente novamente");
 					break;
 			}
 		}
