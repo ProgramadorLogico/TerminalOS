@@ -1,3 +1,8 @@
+/*
+ * Este arquivo é dedicado há fornecer método ou ferramentas que todo o script ou a maioria precisaria,
+ * como captar entrada, esperar um certo tempo, printar algo, etc.
+ */
+
 // Imports
 import java.util.Scanner;
 

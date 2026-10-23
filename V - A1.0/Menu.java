@@ -1,3 +1,9 @@
+/*
+ * Este arquivo se dedica a criar o Menu do projeto, onde futuramente poderá haver outros sistemas
+ * mas por enquanto é o que temos, ele serve para servir de barreira entre o sistema e o usuário
+ * pedindo se ele quer realmente iniciar o sistema ou sair.
+ */
+
 // Imports
 import java.util.Scanner;
 
@@ -14,7 +20,8 @@ public class Menu {
 	public Menu() {
 
 		// Exibe os logs iniciais
-		log("Bem-vindo(A) ao menu de emulação do TerminalOS, o menu está carregando...");
+		log("Bem-vindo(A) ao menu de emulação do TerminalOS");
+		log("O menu está carregando...");
 		log("Nenhuma dependência a resolver");
 		log("Programa iniciado");
 
@@ -37,15 +44,17 @@ public class Menu {
 			switch(entrada) {
 				case "1":
 					log("Opção 1 escolhida");
-					log("O menu está sendo encerrado");
-					log("Todas as dependências resolvidas");
+					log("Procurando o arquivo de BIOS simulada...");
+					Ferramentas.wait(1000);
+					log("BIOS simulada encontrada, iniciando emulação...");
 					Ferramentas.wait(5000);
 					new Sistema();
 					break;
 
 				case "0":
-					log("Encerrando o menu");
-					log("Volte sempre!");
+					log("Encerrando o menu...");
+					log("Nenhuma dependência a resolver");
+					log("Menu encerrado");
 					rodando = false;
 					System.exit(0);
 					break;
