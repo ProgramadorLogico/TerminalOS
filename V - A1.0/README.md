@@ -21,10 +21,10 @@
 8. Aproveite o jogo!
 
 # Aviso!
-	Caso algo não esteja dando certo com o arquivo .jar, verifique se a JVM está instalada em sua máquina
+Caso algo não esteja dando certo com o arquivo .jar, verifique se a JVM está instalada em sua máquina
 
 # Agradecimentos
-	Agradeço de coração a minha equipe, mesmo pequena, ainda fazer a diferença para o projeto, são muito legais 
+Agradeço de coração a minha equipe, mesmo pequena, ainda fazer a diferença para o projeto, são muito legais 
 e me ajudam a gerenciar o projeto, além de dar ideias incriveis para o TerminalOS, caso você tenha alguma sugestão
 mande um comentário de sugestão, correção ou apenas um agradecimento para mim onde você encontrou este projeto, 
 a verdade é que para melhorar o projeto, dependo da opinião pública, então, por favor, fassa sua parte.
