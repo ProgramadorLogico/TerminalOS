@@ -5,6 +5,8 @@
  * para todo o projeto.
  */
 
+import menu.Menu;
+
 // Classe Main
 public class Main {
 	

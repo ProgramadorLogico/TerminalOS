@@ -3,6 +3,10 @@
  * inteiro apenas para isso mas é melhor do que ficar sem entender o código Sistema.java pois o método é
  * enorme, é por uma boa causa.
  */
+ 
+package sistema;
+
+import utilidades.Ferramentas;
 
 public class IniciarSistema {
 

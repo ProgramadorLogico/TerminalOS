@@ -3,6 +3,8 @@
  * como captar entrada, esperar um certo tempo, printar algo, etc.
  */
 
+package utilidades;
+
 // Imports
 import java.util.Scanner;
 

@@ -4,11 +4,17 @@
  * TerminalOS não existe
  */
 
+package sistema;
+
+import utilidades.Ferramentas;
+import menu.Menu;
+
 public class Sistema {
 
 	// Construtor
 	public Sistema() {
 		new IniciarSistema();
+		new DesligarSistema();
 		new Menu();
 	}
 

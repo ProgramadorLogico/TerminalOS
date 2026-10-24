@@ -4,8 +4,12 @@
  * pedindo se ele quer realmente iniciar o sistema ou sair.
  */
 
+package menu;
+
 // Imports
 import java.util.Scanner;
+import sistema.Sistema;
+import utilidades.Ferramentas;
 
 public class Menu {
 
@@ -23,7 +27,6 @@ public class Menu {
 		log("Bem-vindo(A) ao menu de emulação do TerminalOS");
 		log("O menu está carregando...");
 		log("Nenhuma dependência a resolver");
-		log("Programa iniciado");
 
 		// Exibe o título
 		log("");
@@ -46,7 +49,8 @@ public class Menu {
 					log("Opção 1 escolhida");
 					log("Procurando o arquivo de BIOS simulada...");
 					Ferramentas.wait(1000);
-					log("BIOS simulada encontrada, iniciando emulação...");
+					log("BIOS simulada encontrada");
+					log("Iniciando emulação...");
 					Ferramentas.wait(5000);
 					new Sistema();
 					break;

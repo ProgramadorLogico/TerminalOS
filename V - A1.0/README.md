@@ -21,7 +21,7 @@
 8. Aproveite o jogo!
 
 # Aviso!
-	Caso esteja com dificuldade de fazer o arquivo ser executado, uma pesquisa valeria a pena
+	Caso algo não esteja dando certo com o arquivo .jar, verifique se a JVM está instalada em sua máquina
 
 # Agradecimentos
 	Agradeço de coração a minha equipe, mesmo pequena, ainda fazer a diferença para o projeto, são muito legais 
