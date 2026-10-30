@@ -1,32 +1,20 @@
-# Neste arquivo você verá como executar seu programa
 
-# Opção 1, arquivo .jar
-1. Primeiro, baixe o arquivo .zip do repositório oficial ou da loja onde está disponivel o jogo
-2. Segundo, extraia o arquivo .zip
-3. No arquivo .zip, mova o .jar para sua pasta de preferência
-4. Abra as propriedades do arquivo usando o botão direito
-5. Mude `permitir execução como programa` para `sim`
-6. Abra o terminal e acesse a pasta usando o comando ls para mostrar pastas e arquivos e cd para seleciona-lós
-7. Após estar na pasta do arquivo .jar, rode este comando `java -jar nome-do-arquivo.jar`
-8. Aproveite o jogo!
+# Versão Alpha 1.0
 
-# Opção 2, arquivo executável
-1. Primeiro, baixe o arquivo .zip do repositório oficial ou da loja onde está disponivel o jogo
-2. Segundo, extraia o arquivo .zip
-3. Terceiro, mova o executável para sua pasta de preferência
-4. Abra as propriedades do arquivo usando o botão direito
-5. Mude `permitir execução como programa` para `sim` 
-6. Abra o terminal e acesse a pasta usando o comando ls para mostrar pastas e arquivos e cd para seleciona-lós
-7. Após estar na pasta do arquivo executável, rode este comando `./'TerminalOS V - P'`
-8. Aproveite o jogo!
+Olá e seja bem-vindo(A) ao TerminalOS, aqui você verá informações sobre a versão Alpha 1.0 do TerminalOS
+Agradeço caso você esteja lendo isto, fico feliz em saber que alguém viu meu projeto.
 
-# Aviso!
-Caso algo não esteja dando certo com o arquivo .jar, verifique se a JVM está instalada em sua máquina
+# Principais mudanças
 
-# Agradecimentos
-Agradeço de coração a minha equipe, mesmo pequena, ainda fazer a diferença para o projeto, são muito legais 
-e me ajudam a gerenciar o projeto, além de dar ideias incriveis para o TerminalOS, caso você tenha alguma sugestão
-mande um comentário de sugestão, correção ou apenas um agradecimento para mim onde você encontrou este projeto, 
-a verdade é que para melhorar o projeto, dependo da opinião pública, então, por favor, fassa sua parte.
-	
+Nesta versão, foram feitas diversas mudanças, abaixo está a lista delas
+
+1. Rescrita do zero do código
+2. Adição da opção créditos
+3. Melhoria das frases em geral
+4. Melhor organização do código
+
+# Links
+
+Suporte: programador.godot@gmail.com
+Site: https://github.com/ProgramadorLogico/TerminalOS
 

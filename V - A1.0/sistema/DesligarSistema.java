@@ -29,95 +29,8 @@ public class DesligarSistema {
 		wait(3000);
 		log("Processando...");
 		wait(1000);
-		
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
-		System.out.print("\r|");
-		wait(250);
-		System.out.print("\r/");
-		wait(250);
-		System.out.print("\r-");
-		wait(250);
-		System.out.print("\r\\");
-		wait(250);
+
+		animacao();
 		
 		log("");
 		log("Pronto, problema resolvido");
@@ -146,5 +59,23 @@ public class DesligarSistema {
 	// Método de esperar
 	private static void wait(int tempo) {
 		Ferramentas.wait(tempo);
+	}
+
+	private static void animacao() {
+		char[] frames = {'|', '/', '-', '\\'};
+        
+        for (int i = 0; i < 30; i++) {
+            char atual = frames[i % frames.length];
+            System.out.print("\rProcessando... " + atual);
+            System.out.flush();
+            try {
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+
+        System.out.println("");
+        System.out.println("Processamento concluido");
 	}
 }

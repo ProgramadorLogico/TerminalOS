@@ -30,6 +30,7 @@ public class IniciarSistema {
 		log("Status da chamada: Sucesso");
 		wait(500);
 		log("");
+		Sistema.setLigado(true);
 		log("╔════════════════════╗");
 		log("║     TerminalOS     ║");
 		log("╚════════════════════╝");	
@@ -46,7 +47,7 @@ public class IniciarSistema {
 		wait(2000);
 		log("ERRO! Palavra-chave, argumento, paramêtro, variável ou outro não foi encontrado!");
 		log("	fi (servidorGrafico == servidorGrafico.preCarregar()) {");
-		log("	↑");
+		log("	^");
 		log("");
 		log("Linha: 1567");
 		log("Motivo: Argumento não especificado");

@@ -10,6 +10,9 @@ package menu;
 import java.util.Scanner;
 import sistema.Sistema;
 import utilidades.Ferramentas;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.io.IOException;
 
 public class Menu {
 
@@ -35,6 +38,7 @@ public class Menu {
 		log("╚═══════════════════════════╝");
 		log("");
 		log("1 - Iniciar sistema");
+		log("2 - Créditos");
 		log("0 - Sair");
 
 		while(rodando) {
@@ -61,6 +65,15 @@ public class Menu {
 					log("Menu encerrado");
 					rodando = false;
 					System.exit(0);
+					break;
+
+				case "2":
+					try {
+						String conteudo = Files.readString(Path.of("creditos.txt"));
+						System.out.print(conteudo);
+					} catch (IOException e) {
+						System.out.println("Erro ao ler o arquivo " + "créditos");
+					}
 					break;
 
 				default:
