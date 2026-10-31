@@ -9,7 +9,11 @@ Seja bem-vindo(a) à documentação/manual do TerminalOS, neste documento você 
 
 # Instalação
 
-Para instalar o TerminalOS, siga o passo a passo abaixo:
+Para instalar o TerminalOS de forma automática, faça o passo a passo abaixo:
+
+1. 
+
+Para instalar o TerminalOS de forma manual, siga o passo a passo abaixo:
 
 1. Vá até link do github: [https://github.com/ProgramadorLogico/TerminalOS]
 2. Baixe pelo github o jar da versão desejada.
