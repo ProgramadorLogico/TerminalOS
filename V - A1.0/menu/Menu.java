@@ -77,8 +77,7 @@ public class Menu {
 					break;
 
 				default:
-					log("ERRO: Nenhuma opção válida encontrada");
-					log("Tente novamente");
+					log("ERRO: Digite uma opção válida!");
 					break;
 			}
 		}

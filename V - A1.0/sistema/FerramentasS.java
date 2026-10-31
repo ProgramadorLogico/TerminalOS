@@ -1,3 +1,7 @@
+/*
+ * Este arquivo é responsável por fornecer especificamente as ferramentas que só o sistema usa
+ */
+
 package sistema;
 
 import utilidades.Ferramentas;
