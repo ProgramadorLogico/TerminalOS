@@ -1,56 +1,48 @@
-# TerminalOS
+# Documentação / Manual do TerminalOS
 
-O **TerminalOS** é um sistema operacional **falso** que emula um sistema
-real de terminal, ainda somos uma equipe pequena e temos muitas 
-dificuldades, futuramente criarei um site para podermos ter tudo isso
-em um só lugar.
+# Introdução
 
---- 
+Seja bem-vindo(a) à documentação/manual do TerminalOS, neste documento você verá como instalar o TerminalOS, como usá-lo e várias outras coisas.
 
 > [!NOTE]
-> O **TerminalOS** está em fase de desenvolvimento, então ele pode conter
-> bugs e erros, então esperamos que vocês possam nos avisar.
+> O TerminalOS está em fase de desenvolvimento, então ele pode conter alguns bugs
 
---- 
+# Instalação
 
-# Para o futuro
+Para instalar o TerminalOS, siga o passo a passo abaixo:
 
-Para o futuro do **TerminalOS** temos muitas coisas a fazer, pensar e 
-planejar.
+1. Vá até link do github: [https://github.com/ProgramadorLogico/TerminalOS]
+2. Baixe pelo github o jar da versão desejada.
+3. Posicione o jar em uma pasta de sua preferência.
+4. Abra o terminal de seu sistema, use CD e LS (DIR no windows) para se mover até a pasta do jar.
+5. Utilize o comando: java -jar "nome do arquivo" para rodar o TerminalOS.
+6. Divirta-se! Se precisar de ajuda, entre em contato com o e-mail de suporte no rodapé do arquivo.
 
-1. Adicionar músicas e sons ao projeto
-2. Adicionar pequenos jogos simples
-3. Adicionar um comando de status do software
+# Manual
 
-Tudo isso e mais temos intensão de aplicar em futuros projetos.
+Após iniciar o programa, você se deparará com o menu inicial. Ali, digite o número da opção desejada.
+Se você escolher a opção de iniciar o TerminalOS, o sistema começara a iniciar, quando terminado, você se verá em uma tela,
+ali já é o sistema rodando, para verificar o comando de exibição de comandos, digite qualquer coisa e aperte ENTER.
+Você poderá ler os comandos disponíveis, e escolher dentro do sistema simulado. Os comandos variam de versão em versão.
 
---- 
+# Futuro
 
-# Planejamento do projeto
+Para o futuro, o TerminalOS tem diversas propostas:
 
-Nós temos um arquivo online de organização no app AFFiNE, um app de código aberto, 
-caso você queira que algo mude, seja removido ou adicionado, mande um e-mail para
-programador.godot@gmail.com
-Este é o link para o AFFiNE
-https://app.affine.pro/workspace/8a3c71da-0093-4065-98bc-94c3bf0cb7f5/uxH8eZeZjPJyeSv6xJBVB?mode=edgeless
+1. Arquivo de instalação automático;
+2. Suporte a extensões ou complementos;
+3. Suporte a sons e músicas;
+4. Implementação a programas reais.
 
----
+Estes são os propósitos que o TerminalOS aponta para o futuro, dos quais optados conforme a comunidade.
 
-# Site
+# Agradecimentos
 
-Nós estamos trabalhando em um site para o TerminalOS, como não possuimos dinheiro para hospedar um site em um endereço
-web, então o site serve apenas como uma vitrine do projeto, você precisará baixar a pasta do site inteira para poder
-visualizar o site.
+Agradeço a meus amigos por me apoiarem, me ajudarem e tem trilhado pois o TerminalOS. Também agradeço a comunidade que faz projetos, e contribuem para o aumento da popularidade do projeto.
 
----
+# Rodapé 
 
-> [!NOTE]
-> Sinto muito pessoal, mas o **TerminalOS** terá que ter o desenvolvimento parado por um tempo para eu e minha equipe
-> Decidirmos o que iremos fazer com o projeto, isso acontece devido a alguns fatores abaixo:
-> 1. Código muito extenso
-> 2. Muitas coisas para lembrar
-> 3. Funções confusas
-> 4. Extensão do projeto
->
-> Realmente, eu não queria dar está notícia, mas o **TerminalOS** ficará pausado por um tempo indeterminado, talvez precisando
-> do código rescrito do **zero.**
+Contato: programador.godot@gmail.com
+Site: [https://github.com/ProgramadorLogico/TerminalOS]
+
+@ 2026 Um sistema operacional falso simulado.

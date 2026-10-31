@@ -39,4 +39,22 @@ public class Ferramentas {
 			e.printStackTrace();
 		}
 	}
+
+	public static void animacao(int vezes, String texto, String texto2) {
+		char[] frames = {'|', '/', '-', '\\'};
+        
+        for (int i = 0; i < vezes; i++) {
+            char atual = frames[i % frames.length];
+            System.out.print("\r" + texto + atual);
+            System.out.flush();
+            try {
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+
+        System.out.println("");
+        System.out.println(texto2);
+	}
 }
