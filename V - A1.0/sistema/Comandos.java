@@ -20,7 +20,7 @@ public class Comandos {
 
 	public static void ver() {
 		Ferramentas.log("VER");
-		FerramentasS.lerArquivo("../VERSOES.md", "Versões");
+		FerramentasS.lerArquivo("VERSOES.md", "Versões");
 
 		System.out.print("Versão atual: ");
 		FerramentasS.lerArquivo("versaoAtual.txt", "Versão atual");

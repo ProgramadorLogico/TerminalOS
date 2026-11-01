@@ -1,1 +1,5 @@
+# Ignorando arquivos copilados
 *.class
+
+# Ignorando pasta de notas
+Notas

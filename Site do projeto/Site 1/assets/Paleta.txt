@@ -1,0 +1,19 @@
+# Cores padrão
+
+Cor de fundo: #162b15
+Cor do texto: #ffffff
+Cor da borda: #164014
+
+# Cores hover
+
+Cor da borda: #1c6618
+Cor de fundo: #0f290e
+
+# Links
+
+Cor: #1c8517
+
+# Links.hover
+
+Cor: #1eb816
+
