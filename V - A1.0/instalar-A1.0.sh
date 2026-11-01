@@ -64,6 +64,9 @@ if [[ "$opcao" = "1" ]]; then
 	# Baixa a logo
 	curl -L -o Logo.png "https://github.com/ProgramadorLogico/TerminalOS/raw/refs/heads/main/Recursos/Logo.png"
 
+	# Baixa o arquivo de versões (VERSOES.md)
+	curl -L -o VERSOES.md "https://github.com/ProgramadorLogico/TerminalOS/raw/refs/heads/main/VERSOES.md"
+
 	# Criar o atalho no menu
 	cat << EOF > ~/.local/share/applications/terminalos.desktop
 [Desktop Entry]
@@ -73,7 +76,7 @@ Name=TerminalOS
 Comment=Sistema operacional simulado de texto
 Exec=$EXECUTAVEL
 Path=$HOME/.terminalos/
-Icon=terminal
+Icon=$ICON
 Terminal=true
 Categories=Game;
 EOF
