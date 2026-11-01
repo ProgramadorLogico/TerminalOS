@@ -45,7 +45,7 @@ if [[ "$opcao" = "1" ]]; then
 	# Válida a opção
 	if [[ "$opcao" = "1" ]]; then
 		# Baixa o .jar
-		curl -L -o "TerminalOS.zip" "https://github.com/ProgramadorLogico/TerminalOS/raw/refs/heads/main/V%20-%20A1.0/TerminalOS-java.zip"
+		curl -L -o "TerminalOS.zip" "https://github.com/ProgramadorLogico/TerminalOS/raw/refs/heads/main/V%20-%20A1.0/TerminalOS-Java.zip"
 		unzip "TerminalOS.zip"
 		rm -rf "TerminalOS.zip"
 		chmod +x "TerminalOS.jar"
